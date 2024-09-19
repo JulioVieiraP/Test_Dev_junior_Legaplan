@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Test_Dev_junior_Legaplan
 
-## Getting Started
+O projeto é uma lista de tarefas com o sistema de CRUD, e responsiva usando next.js e sass(scss)
 
-First, run the development server:
+## Demonstração
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![image](https://github.com/user-attachments/assets/bbf3a74e-51ea-417b-a305-ef809b8ce864)
+
+## Funcionalidades
+
+- ✅ Criar, atualizar e deletar tarefas com título
+- ✅ Visualizar todas as tarefas em uma lista incluido as concluidas
+- ✅ Marca se a tarefa esta completa
+- ✅ Excuir tarefas
+- ⛔ Funcionalidade de login (Em desenvolvimento)
+
+## Tecnologias Utilizadas
+
+- Front-end: [Next.js](https://nextjs.org), [Scss](https://sass-lang.com)
+
+## Instalação
+
+Instruções para configurar o projeto localmente:
+
+### Iniciando o backend com json server
+
+``` bash
+# Digite o comando
+npm run backend
+
+# O servidor irar rodar localmente na porta 3001
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Iniciando o frontend
+``` bash
+# Clone o repositório
+git clone https://github.com/JulioVieiraP/Test_Dev_junior_Legaplan.git
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Entre no diretório
+cd frontend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Instale as dependências
+npm install
 
-## Learn More
+# Execute a aplicação
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
