@@ -1,0 +1,43 @@
+@import '../abstracts/variables.module';
+
+.Button {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding: 16px 24px;
+  color: white;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+
+  &--cancel {
+    background: $corDoBtnCancel;
+    color: $corDoTexto;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &--confirm {
+    background: $corDoBtnConfirm;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  &--delete {
+    background: $corDoBtnDelete;
+    color: white;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

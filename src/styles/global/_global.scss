@@ -1,14 +1,4 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import '../abstracts/variables.module';
 
 html,
 body {
@@ -17,8 +7,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: $corDeFundo;
+  color: $corDoTexto;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,6 +18,20 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  list-style: none;
+  font-family: Inter Tight;
+}
+
+.Button__div {
+  margin: 0 auto;
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media(max-width: $breakpoint-sm) {
+    max-width: 90%;
+  }
 }
 
 a {

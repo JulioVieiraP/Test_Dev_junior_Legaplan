@@ -1,0 +1,46 @@
+@import '../abstracts/variables.module';
+
+.header {
+  margin: 24px 56px 0;
+  border-bottom: 1px solid $corDoBorderHeader;
+
+  @media(max-width: $breakpoint-sm) {
+    margin: 24px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 24px;
+
+    @media(max-width: $breakpoint-sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      height: 114px;
+      width: 90%;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 100px;
+    line-height: 29.04px;
+
+    @media(max-width: $breakpoint-sm) {
+      margin-left: 0;
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 19.36px;
+    }
+  }
+
+  &__date {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    color: $corTextoApagado;
+  }
+}

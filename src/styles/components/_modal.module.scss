@@ -1,0 +1,117 @@
+@import '../abstracts/variables.module';
+
+.Modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $corDeModalBlur;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+
+  &__content {
+    max-width: 450px;
+    width: 100%;
+    z-index: 100;
+    height: auto;
+    padding: 32px;
+    border-radius: 16px;
+    gap: 32px;
+    box-shadow: 0px 24px 48px -12px #1018282E;
+    background-color: $corDeFundo;
+
+    h2 {
+      margin-bottom: 32px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29.04px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      color: $corDoTexto;
+    }
+
+    p {
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.02em;
+      text-align: left;
+    }
+
+    &__campo {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.36px;
+        color: $corDoTexto;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 100%;
+        height: 51px;
+        border-radius: 8px;
+        border: 1px solid $corDoBorderHeader;
+        background-color: $corDeFundo;
+        color: $corDoTexto;
+
+        &::placeholder {
+          padding: 16px;
+        }
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 0;
+      height: 100%;
+      padding: 16px;
+      box-shadow: none;
+      overflow-y: auto;
+
+      h2{
+        margin-bottom: 32px;
+      }
+
+      p{
+        margin-bottom: 8px;
+      }
+
+      &__button {
+        flex-direction: column-reverse;
+
+        .Button{
+          width: 272px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import '../abstracts/variables.module';
+
+.List {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid $corDoBorderList;
+  box-shadow: 0px 1px 2px 0px #1018280D;
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 32px;
+
+  @media(max-width: $breakpoint-sm) {
+    width: 90%;
+    height: 428px;
+    margin: 24px;
+  }
+
+  h3 {
+    margin: 24px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: $corTextoApagado;
+  }
+
+  &__header {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &__tasks,
+  &__completed {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &__msg{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 19px;
+    margin-bottom: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+
+    input[type='checkbox'] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border: 1px solid $corDoBorderHeader;
+      cursor: pointer;
+      position: relative;
+
+      &:checked {
+        background-color: $corDentroDoCheckbox;
+        border-color: $corBordaCheckBox;
+
+        &:checked + div label {
+          text-decoration: line-through;
+          font-family: Inter Tight;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.36px;
+          color: $corTextoApagado;
+        }
+      }
+
+      &:checked::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+        background-image: url('/images/icon_V.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.3);
+      }
+    }
+
+    div {
+      width: 274px;
+      margin-left: 16px;
+      cursor: pointer;
+
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+}
