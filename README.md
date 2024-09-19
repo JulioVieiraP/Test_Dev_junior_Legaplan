@@ -16,7 +16,7 @@ O projeto é uma lista de tarefas com o sistema de CRUD, e responsiva usando nex
 
 ## Tecnologias Utilizadas
 
-- Front-end: [Next.js](https://nextjs.org), [Scss](https://sass-lang.com)
+- Front-end: [Next.js](https://nextjs.org), [Scss](https://sass-lang.com), [TypeScript](https://www.typescriptlang.org)
 
 ## Instalação
 
